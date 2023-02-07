@@ -1,0 +1,12 @@
+document.addEventListener('DOMContentLoaded', function(event) {
+  Chat.init();
+  var chatAsunto = Chat.helpers.getURLParam(Chat.subject_param);
+  console.log(chatAsunto);
+  if (chatAsunto) {
+    Chat.setDefaultValues({'subject': chatAsunto}, true, true);
+    document.querySelector('#floating-menu .open-icon').addEventListener('click', function(event) {
+      event.preventDefault();
+      Chat.prechat.open();
+    });
+  }
+});

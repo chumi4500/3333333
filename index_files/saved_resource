@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<script language="javascript" type="text/javascript" src="https://baccredomatic--tst2.custhelp.com/web-determinations/staticresource/interviews.js"></script>
+<link href="https://solicitudes.baccredomatic.com/web-determinations/staticresource/interviews.css" rel="stylesheet" type="text/css" />
+<link href="https://archivos.baccredomatic.com/opa/css/opa.prod.min.css?v=4.0" rel="stylesheet" type="text/css" />
+<script src="/modules/custom/bac_forms/chat/js/chat/chat.min.js"></script>
+<link href="/modules/custom/bac_forms/chat/css/chat/chat.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://resources.digital-cloud-west.medallia.com/wdcwest/2853/onsite/embed.js" async></script>
+<script><!-- Google Tag Manager -->
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9RNPC3');
+    <!-- End Google Tag Manager --></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-68007908-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);if (window.location.href.indexOf("servicios-en-linea") > -1) {
+   var getUrl = window.location.href;
+    var getPath = window.location.pathname;
+    var getHash;
+    var getBacId;
+
+    if (window.location.hash) {
+        getHash = window.location.hash;
+        if (getHash.indexOf("?=") > -1) {
+            getBacId = getHash.split("?=").pop();
+            gaSettings(getPath, getBacId);
+        } else {
+            gaSettingsWithoutBacId(getPath+getHash);
+        }
+    } else {
+        if (!window.location.search) {
+            gaSettingsWithoutBacId(getPath+getHash);
+        } else {
+            var getSearch = window.location.search;
+            if (getSearch.indexOf("&fbclid") > -1) {
+                var setPath = getSearch.split("&fbclid=").shift();
+                getBacId = setPath.split("?=").pop();
+                gaSettings(getPath, getBacId, "");
+            } else if (getSearch.indexOf("&gclid") > -1) {
+                var setPath = getSearch.split("&gclid=").shift();
+                getBacId = setPath.split("?=").pop();
+                gaSettings(getPath, getBacId, "");
+            } else {
+                var tempGetBacId = getSearch.split("?=")
+                if (tempGetBacId.length === 1) {
+                    gaSettings(getPath, "", getSearch)
+                }
+                if (tempGetBacId.length > 1) {
+                    getBacId = tempGetBacId.pop();
+                    getSearch = getSearch.replace("?=" + getBacId, "");
+                    gaSettings(getPath, getBacId, getSearch);
+                }
+
+            }
+        }
+    }
+    function gaSettings(path, bacid, search) {
+        if (search === null || search === undefined || search === "") {
+            ga('set', 'page', path + '?=' + bacid);
+            ga('set', 'campaignName', bacid);
+        }
+        if (search) {
+            if (bacid === "") {
+                ga('set', 'page', path + '?=' + search);
+            }
+            if (bacid !== "") {
+                ga('set', 'page', path + '?=' + search + '?=' + bacid);
+                ga('set', 'campaignName', bacid);
+            }
+        }
+    }
+    function gaSettingsWithoutBacId(path) {
+        ga('set', 'page', path);
+    }
+}
+else {
+   
+function gaSettings(path, bacid, search, hash) {
+    if (bacid == '' || bacid == null || bacid == undefined) {
+        if (search == '' || search == null || search == undefined) {
+            if (hash == '' || hash == null || hash == undefined) {
+                gaSettingsWithoutBacId(path+hash);
+            } else {
+                ga('set', 'page', path + hash);
+            }
+            gaSettingsWithoutBacId(path+hash);
+        } else {
+            if (hash == '' || hash == null || hash == undefined) {
+                ga('set', 'page', path + search);
+            } else {
+                ga('set', 'page', path + search + hash);
+            }
+        }
+    } else {
+        if (search == '' || search == null || search == undefined) {
+            if (hash == '' || hash == null || hash == undefined) {
+                ga('set', 'page', path + '?bacid=' + bacid);
+            } else {
+                ga('set', 'page', path + '?bacid=' + bacid + hash);
+            }
+        } else {
+            if (hash == '' || hash == null || hash == undefined) {
+                ga('set', 'page', path + search);
+            } else {
+                var urlParams = new URLSearchParams(search);
+                getBacId = urlParams.get("bacid")
+                if(getBacId) {
+                    ga('set', 'page', path + search + hash);
+                } else {
+                    ga('set', 'page', path + search + '?bacid=' + bacid + hash);
+                }
+                
+            }
+    
+        }
+    }
+    ga('set', 'campaignName', bacid);
+    }
+    
+    function gaSettingsWithoutBacId(path) {
+    ga('set', 'page', path);
+    }
+    
+    function cleaner(clidsToLook, urlObject, bacIdType) {
+    for (let i = 0; i < clidsToLook.length; i++) {
+    
+        if (urlObject.indexOf(clidsToLook[i]) > -1) {
+            let getClid = urlObject.split(clidsToLook[i]).pop();
+    
+            if (getClid.indexOf("&") > -1) {
+                let delClid = getClid.split("&").shift();
+                urlObject = urlObject.replace(delClid, "");
+            } else if (getClid.indexOf(bacIdType) > -1) {
+                let delClid = getClid.split(bacIdType).shift();
+                urlObject = urlObject.replace(delClid, "");
+            } else {
+                urlObject = urlObject.replace(getClid, "");
+            }
+            urlObject = urlObject.replace(clidsToLook[i], "");
+        }
+    }
+    
+    return urlObject;
+    }
+    
+    function getCut() {
+    return;
+    }
+    
+    
+    
+    var getUrl = window.location.href;
+    var getPath = window.location.pathname;
+    var getBacId;
+    
+    
+    if (window.location.hash || window.location.search) {
+    
+    var getHash = window.location.hash;
+    var getSearch = window.location.search;
+    
+    var clids = ["?gclid=", "?fbclid=", "&gclid=", "&fbclid="];
+    
+    if (getUrl.indexOf("bacid=") > -1) {
+    
+        if (getSearch) {
+            getSearch = cleaner(clids, getSearch, "?bacid=");
+            var urlParams = new URLSearchParams(getSearch);
+            getBacId = urlParams.get("bacid")
+        }
+    
+        if (getHash) {
+            getHash = cleaner(clids, getHash, "?bacid=");
+            if (getHash.indexOf("?bacid=") > -1) {
+                getBacId = getHash.split("?bacid=").pop();
+                getHash = getHash.replace("?bacid=" + getBacId, "");
+            }
+            if (getHash.indexOf("&bacid=") > -1) {
+                getBacId = getHash.split("&bacid=").pop();
+                getHash = getHash.replace("&bacid=" + getBacId, "");
+            }
+        }
+    
+        if (getPath) {
+            getPath = cleaner(clids, getPath, "?bacid=");
+            if (getPath.indexOf("?bacid=") > -1) {
+                getBacId = getPath.split("?bacid=").pop();
+                getPath = getPath.replace("?bacid=" + getBacId, "");
+            }
+        }
+    
+        gaSettings(getPath, getBacId, getSearch, getHash);
+        getCut();
+    }
+    
+    if (getUrl.indexOf("?=") > -1) {
+        if (window.location.hash) {
+            getHash = cleaner(clids, getHash, "?=");
+            if (getHash.indexOf("?=") > -1) {
+                getBacId = getHash.split("?=").pop();
+                getHash = getHash.replace("?=" + getBacId, "");
+            }
+        }
+        if (window.location.search) {
+            getSearch = cleaner(clids, getSearch, "?=");
+            if (getSearch.indexOf("?=") > -1) {
+                getBacId = getSearch.split("?=").pop();
+                getSearch = getSearch.replace("?=" + getBacId, "");
+            }
+        }
+        if (window.location.pathname) {
+            getPath = cleaner(clids, getPath, "?=");
+            if (getPath.indexOf("?=") > -1) {
+                getBacId = getPath.split("?=").pop();
+                getPath = getPath.replace("?=" + getBacId, "");
+            }
+        }
+    }
+    gaSettings(getPath, getBacId, getSearch, getHash);
+    } else {
+    gaSettingsWithoutBacId(getPath+ window.location.hash);
+    }    
+}ga("send", "pageview");</script>
+<style>/* @see https://github.com/aFarkas/lazysizes#broken-image-symbol */.js img.lazy:not([src]) { visibility: hidden; }/* @see https://github.com/aFarkas/lazysizes#automatically-setting-the-sizes-attribute */.js img.lazyloaded[auto=auto] { display: block; width: 100%; }</style>
+<link rel="canonical" href="https://www.baccredomatic.com/" />
+<meta http-equiv="content-language" content="es" />
+<link rel="shortlink" href="https://www.baccredomatic.com/" />
+<meta property="og:site_name" content="BAC Credomatic" />
+<meta property="og:url" content="https://www.baccredomatic.com/personas/banca-personas" />
+<meta property="og:title" content="Banca Personas" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/bac_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="es" href="https://www.baccredomatic.com/" />
+<link rel="alternate" hreflang="es-sv" href="https://www.baccredomatic.com/es-sv" />
+<link rel="alternate" hreflang="es-hn" href="https://www.baccredomatic.com/es-hn" />
+<link rel="alternate" hreflang="es-gt" href="https://www.baccredomatic.com/es-gt" />
+<link rel="alternate" hreflang="es-ni" href="https://www.baccredomatic.com/es-ni" />
+<link rel="alternate" hreflang="es-cr" href="https://www.baccredomatic.com/es-cr" />
+<link rel="alternate" hreflang="es-pa" href="https://www.baccredomatic.com/es-pa" />
+<link rel="alternate" hreflang="es-bs" href="https://www.baccredomatic.com/es-bs" />
+<link rel="alternate" hreflang="es-ky" href="https://www.baccredomatic.com/es-ky" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Banca Personas | BAC Credomatic</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_kGI50HtGRpOMXJXLuIxh2AVrqdzeTmlmRNjVYt6Bw58.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_-YpWOnMbPUPv5focKvYkJUvB2mVxEGh0C8qomqGHYpY.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_apDqcP8bUdxhKmQD8jDfz-OgoU154mzitgSQKPVLnjs.css" />
+
+    
+    <link rel="stylesheet" href="https://shepherdjs.dev/dist/css/shepherd.css"/>
+  
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="D83NH-HJDKW-M5E7D-SU2F5-LXKS4",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"D83NH-HJDKW-M5E7D-SU2F5-LXKS4";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="x2hn23ixfuo3ayvsq5wq-f-2f32c9a9e-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"32","ak.cp":"445008","ak.ai":parseInt("495587",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"473053ef","ak.r":35135,"ak.a2":n,"ak.m":"ksd","ak.n":"essl","ak.bpcip":"190.142.221.0","ak.cport":49933,"ak.gh":"184.28.209.124","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1655867245","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==lNRoVZJXz1sYo3L8eCn7x/kQtfINbQ/JGYFJCX5xwgkncOTPTkOE7cXJWl2gGngc7CfIj4vjkRSQBae2sE6BSkak4q2NphYG2IsFrIMnULdIzT34OidVcNWArM29mvt4yZt5Zal/oMCO3inOeiFZ7kJy/zMqv5U8rxxV3p8mmLYTXbl60++oPKarT3S32eoKpA5t6iUwKGVZxSm7mTKoGu+3+ZrRp1P+ZH8B5fUR8giIAyebFrU+EjL5X3XjFJR2LtHokJa7yhihzoZnKZXP4mfhSD+TN5hBaIGW3e+2eKJgAGftQ2TXiCCFyahXJL04t25gCufKxlG6a4MfOpRADa75M+C3ewSpPJZ/TwuDOqBBPMcV9gqd9YB8xoteZ/bDnr1SNcL+IYpylvurcluJ/U7x+Udt7zfQhVbr5ZOWYTc=","ak.pv":"8","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+  <body class="path-frontpage page-node-type-landing-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9RNPC3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Pasar al contenido principal
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+
+
+<div  class="layout-container">
+          
+
+
+
+<header  class="header">
+  <div class="header--first-row">
+            
+        
+
+<div  id="block-sitebranding" class="logo__branding">
+      <a
+   class="logo-link"
+    href="/"
+  title=""
+>
+                              
+
+    <img
+     class="logo__image logo__image--desktop"
+            src="/themes/custom/bac_theme/images/logo.png"
+          alt="Logo"
+          />
+          
+
+    <img
+     class="logo__image logo__image--mobile"
+            src="/themes/custom/bac_theme/images/logo-small.png"
+          alt="Logo"
+          />
+              </a>  </div>
+
+      
+        
+                      
+                  <div class="header--first-row__last-section">
+      <div  class="header__secondary-menu">
+        <ul class="secondary-menu">
+                            
+
+
+
+<span  id="block-views-block-platforms-list-view" class="platforms-popup__open views-element-container">Sitios BAC</span>
+
+<div class="platforms-popup">
+  <div  class="platforms-popup__wrapper">
+    <span  class="platforms-popup__close">Volver al menú</span>
+
+    <div  class="platforms-popup__content">
+      
+<h2  class="h2">
+      Nuestras plataformas de servicios
+  </h2>
+      <div  class="platforms-popup__platforms">
+                    </div>
+    </div>
+  </div>
+</div>
+
+
+
+          
+
+
+
+    
+      <li  class="secondary-menu__item secondary-menu__item--custom_tooltips secondary-menu__item--platforms">
+              <span class="secondary-menu__nolink">Sitios BAC</span>
+                </li>
+          
+
+
+
+    
+      <li  class="secondary-menu__item secondary-menu__item--custom_tooltips secondary-menu__item--login">
+              <span class="secondary-menu__nolink">Banca en Línea</span>
+              <span class="tooltip-menu-item">¡Ingrese o regístrese a nuestra Banca en Línea aquí!</span>
+                </li>
+  
+
+
+              </ul>
+      </div>
+              <div class="language-switcher-dropdown">
+  <div class="dropdown-menu">
+          <button type="button" name="laguage-switcher-btn" class="header-laguage-switcher-btn">
+        <span class="button-switcher-name">
+          Spanish
+        </span>
+          <span class="button-switcher-id">
+          ES
+        </span>
+      </button>
+        <ul class="links"><li hreflang="es-sv" data-drupal-link-system-path="&lt;front&gt;" class="es-sv"><a href="/es-sv" class="language-link" hreflang="es-sv" data-drupal-link-system-path="&lt;front&gt;">SV El Salvador</a></li><li hreflang="es-hn" data-drupal-link-system-path="&lt;front&gt;" class="es-hn"><a href="/es-hn" class="language-link" hreflang="es-hn" data-drupal-link-system-path="&lt;front&gt;">HN Honduras</a></li><li hreflang="es-gt" data-drupal-link-system-path="&lt;front&gt;" class="es-gt"><a href="/es-gt" class="language-link" hreflang="es-gt" data-drupal-link-system-path="&lt;front&gt;">GT Guatemala</a></li><li hreflang="es-ni" data-drupal-link-system-path="&lt;front&gt;" class="es-ni"><a href="/es-ni" class="language-link" hreflang="es-ni" data-drupal-link-system-path="&lt;front&gt;">NI Nicaragua</a></li><li hreflang="es-cr" data-drupal-link-system-path="&lt;front&gt;" class="es-cr"><a href="/es-cr" class="language-link" hreflang="es-cr" data-drupal-link-system-path="&lt;front&gt;">CR Costa Rica</a></li><li hreflang="es-pa" data-drupal-link-system-path="&lt;front&gt;" class="es-pa"><a href="/es-pa" class="language-link" hreflang="es-pa" data-drupal-link-system-path="&lt;front&gt;">PA Panamá</a></li><li hreflang="es-bs" data-drupal-link-system-path="&lt;front&gt;" class="es-bs"><a href="/es-bs" class="language-link" hreflang="es-bs" data-drupal-link-system-path="&lt;front&gt;">BS Bahamas</a></li><li hreflang="es-ky" data-drupal-link-system-path="&lt;front&gt;" class="es-ky"><a href="/es-ky" class="language-link" hreflang="es-ky" data-drupal-link-system-path="&lt;front&gt;">KY Grand Cayman</a></li></ul>
+  </div>
+</div>
+
+          </div>
+    <div class="nav-mobile-icon__wrapper">
+      <div id="nav-mobile-icon" class="nav-mobile-icon__menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="header--second-row">
+                      
+                <nav id="secondary-menu"></nav>
+          <div  class="header__mobile-secondary-menu"></div>
+  </div>
+    </header>
+
+        
+    
+    
+    
+    <div>
+    <a id="main-content" tabindex="-1"></a>        <main role="main"  class="main-content">
+          <div id="block-loginblock">
+  
+    
+      <script src="https://archivos.baccredomatic.com/firma_digital/js/stapes.min.js"></script>
+<script src="https://archivos.baccredomatic.com/firma_digital/js/BrowserUtils.js"></script>
+<script src="https://archivos.baccredomatic.com/firma_digital/js/bacdesktop.js"></script>
+
+
+
+<div class="login-form visually-hidden" id="landingLoginForm">
+  <div class="login-form__heading">
+    <h3 class="login-form__title">Banca en Línea</h3>
+    <button type="button" class="login-form__close-button" aria-label="Ocultar Log in de sucursal electronica">
+      Ocultar Log in de sucursal electronica
+    </button>
+  </div>
+  <form
+    accept-charset="UTF-8"
+    action="https://www.sucursalelectronica.com/redir/redirect.go?country=ES"
+    autocomplete="off"
+    class="login-form__form"
+    method="post"
+    id="loginForm"
+    name="loginForm">
+        <h4 class="login-form__subtitle visually-hidden">Seleccione el método de ingreso:</h4>
+    <div role="group" aria-labelledby="login-form__radios-title" class="login-form__methods visually-hidden">
+      <div class="login-form__method">
+        <input class="login-form__radio" id="bac-signature-password" type="radio" name="bac_signature" value="contrasena" checked="checked">
+        <label class="login-form__radio-label login-form__label" for="bac-signature-password">Contraseña</label>
+      </div>
+      <div class="login-form__method">
+        <input class="login-form__radio" id="bac-signature-digital" type="radio" name="bac_signature" value="firmadigital">
+        <label class="login-form__radio-label login-form__label" for="bac-signature-digital">Firma digital</label>
+      </div>
+    </div>
+    
+        <div class="login-form__item">
+      <label class="login-form__label--text login-form__label" for="product">
+        Usuario
+      </label>
+      <input
+        class="login-form__input--text login-form__input--user"
+        id="product"
+        maxlength="128"
+        name="product"
+        placeholder="Usuario"
+        size="20"
+        type="text">
+    </div>
+    
+        <div class="login-form__item">
+      <label class="login-form__label--text login-form__label login-form__label--password" for="pass">
+        Contraseña
+        <input class="login-form__input--text login-form__input--password" id="pass" maxlength="128" name="pass" placeholder="Contraseña" size="20" type="password">
+      </label>
+    </div>
+    
+    <div role="group" aria-labelledby="login-form__checkboxes-wrapper" class="login-form__radios-wrapper">
+      <span id="login-form__checkboxes-wrapper" class="visually-hidden">Checkboxes para recordar usuario o usar token</span>
+            <div class="login-form__item login-form__item--checkbox">
+        <input class="login-form__input--checkbox" id="remember-me" name="remember_me" type="checkbox" value="1">
+        <label class="login-checkbox-label login-form__label"for="remember-me">recordar usuario</label>
+      </div>
+                  <div class="login-form__item login-form__item--checkbox">
+        <input
+          class="login-form__input--checkbox login-form__input--checkbox-token"
+          id="input-token"
+          name="tokenPersistent"
+          type="checkbox"
+          value="on">
+        <label class="login-checkbox-label login-form__label login-form__label--token" for="input-token">usar token</label>
+      </div>
+          </div>
+
+        <div class="login-form__item login-form__item--token">
+      <input
+        class="login-form__input--text login-form__input--token visually-hidden"
+        id="tokenInformation"
+        maxlength="128"
+        name="token"
+        placeholder="Token"
+        size="20"
+        type="text"
+        value="">
+    </div>
+    
+    <div class="login-form__submit">
+      <button
+      class="login-form__button login-form__submit-btn"
+      id="head-login-button"
+      name="op"
+      type="submit"
+      value="ingresar">
+        ingresar
+      </button>
+    </div>
+
+        
+        <div role="group" aria-labelledby="login-form__forgot-credentials-title" class="login-form__radios-wrapper login-form__forgot-password">
+      <span id="login-form__forgot-credentials-title" class="visually-hidden">¿Olvidó su usuario o contraseña?</span>
+      <span>¿Olvidó su
+        <a href="https://www.sucursalelectronica.com/ebac/module/userrecovery/showUserRecovery.go?selectedCountry=ES">
+          usuario
+        </a>
+          o
+        <a href="https://www.sucursalelectronica.com/ebac/module/passwordmanagement/showPasswordByEmail.go?selectedCountry=ES">
+          contraseña
+        </a>?
+      </span>
+    </div>
+
+        <div role="group" aria-labelledby="login-form__create-user-title" class="login-form__radios-wrapper login-form__new-account">
+      <span id="login-form__create-user-title">¿Primera vez que ingresa?</span>
+      <a href="https://www.sucursalelectronica.com/ebac/module/createUser/showCreateNewUser.go?selectedCountry=ES">
+        Crear usuario
+      </a>
+    </div>
+
+        <input type="hidden" id="signatureDataHash" name="signatureDataHash">
+  </form>
+</div>
+
+  </div>
+
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-bac-theme-page-title">
+  
+    
+      
+  <h1><span>Banca Personas</span>
+</h1>
+
+
+  </div>
+<div id="block-bac-theme-content">
+  
+    
+      
+<article role="article" class="node node--promoted landing-page landing-page--full">
+  
+  
+
+        <div class="layout layout--onecol layout--fixed-width layout__mg-bottom--small">
+          <div  class="layout__content">
+        <div>
+  
+    
+      <div class="body-hidden"></div>
+
+<div  class="country-selection">
+  
+<h2  class="h2">
+      Seleccione su país
+  </h2>
+
+  
+<h3  class="h3">
+      Select your country
+  </h3>
+
+      
+<div class="main">
+  <div  class="country-list">
+                      
+<div  class="country">
+  <div class="country__image">
+    <div class=es-cr></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-cr"
+  >
+          Costa Rica
+      </a>
+  </div>
+</div>
+
+                  
+<div  class="country">
+  <div class="country__image">
+    <div class=es-pa></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-pa"
+  >
+          Panamá
+      </a>
+  </div>
+</div>
+
+                  
+<div  class="country">
+  <div class="country__image">
+    <div class=es-hn></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-hn"
+  >
+          Honduras
+      </a>
+  </div>
+</div>
+
+                  
+<div  class="country">
+  <div class="country__image">
+    <div class=es-ni></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-ni"
+  >
+          Nicaragua
+      </a>
+  </div>
+</div>
+
+                  
+<div  class="country">
+  <div class="country__image">
+    <div class=es-gt></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-gt"
+  >
+          Guatemala
+      </a>
+  </div>
+</div>
+
+                  
+<div  class="country">
+  <div class="country__image">
+    <div class=es-sv></div>
+  </div>
+  <div class="country__button">
+    
+
+
+
+  <a
+     class="button"
+        href="/es-sv"
+  >
+          El Salvador
+      </a>
+  </div>
+</div>
+
+                </div>
+</div>
+
+  </div>
+
+  </div>
+
+      </div>
+      </div>
+
+      </article>
+
+  </div>
+
+  </div>
+
+          </main>
+  </div>
+              <div>
+    <div id="block-disclaimer">
+  
+    
+      
+
+
+<div  class="disclaimer disclaimer--hidden">
+    <div class="main">
+      <div class="disclaimer__text"><p>Utilizamos cookies para optimizar nuestros servicios y darte una mejor experiencia de navegación.</p>
+</div>
+      <div class="disclaimer__buttons--wrapper">
+        <div class="disclaimer__button">
+          
+
+
+
+  <button  class="button" aria-label="button"
+    >
+          Ok
+      </button>
+        </div>
+                  <div class="disclaimer__button--cancel">
+            
+
+
+
+  <button  class="button button--white" aria-label="button"
+    >
+          Cancelar
+      </button>
+          </div>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+
+  </div>
+
+    
+          
+<footer  class="footer">
+  <img class="footer-background-image" src="/themes/custom/bac_theme/images/footer-background.jpg" alt="footer-background" />
+  <div class="main">
+    <div class="footer-first-row">
+              
+        
+
+<div  class="logo__branding">
+      <a
+   class="logo-link"
+    href="/"
+  title=""
+>
+                    
+
+    <img
+     class="logo__image logo__image--desktop"
+            src="/themes/custom/bac_theme/images/logo-white.png"
+          alt="Logo"
+          />
+              </a>  </div>
+      
+                
+        
+                
+        
+      
+<div class="main-footer-wrapper">
+  
+<h3  class="h3 h3--main-footer-title">
+      Aplicaciones para Móviles
+  </h3>
+  <nav id="main-footer-wrapper" class="main-footer-menu">
+            <ul class="apps_menu_list">
+          <li class="apps_menu_item">
+            <a class="apps_menu_link" href="https://itunes.apple.com/cr/app/ibac/id465508552?mt=8">
+              Appstore
+              <img class="apps_menu_img" src="/themes/custom/bac_theme/images/appstore.png" alt="appstore"/>
+            </a>
+          </li>
+          <li class="apps_menu_item">
+            <a class="apps_menu_link" href="https://play.google.com/store/apps/details?id=net.bac.sbe.android">
+              Playstore
+              <img class="apps_menu_img" src="/themes/custom/bac_theme/images/googleplay.png" alt="playstore"/>
+            </a>
+          </li>
+          <li class="apps_menu_item">
+            <a class="apps_menu_link" href="https://appgallery.cloud.huawei.com/ag/n/app/C101707381?channelId=broswer&detailType=0">
+              Huawei
+              <img class="apps_menu_img" src="/themes/custom/bac_theme/images/huawei.png" alt="huawei"/>
+            </a>
+          </li>
+        </ul>
+        </nav>
+  </div>
+    </div>
+    <div class="footer-second-row">
+
+                
+        
+                
+            </div>
+    <p class="footer-copy-right">Todos los derechos reservados. 2022© BAC Credomatic International Bank </p>
+  </div>
+</footer>
+      </div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/126016","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"es"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"external_link_popup":{"whitelist":"sucursalelectronica.com\r\nbaccredomatic.com\r\nyomeuno.com\r\nmipromo.com\r\nviajesbaccredomatic.com\r\nbancamovilbaccredomatic.page.link\r\nbac-holding.com\r\ntalento360.csod.com\r\nagentevirtual.baccredomatic.com:40457","width":"85%","popups":[{"id":"default","name":"Por defecto","status":true,"weight":10,"close":true,"title":"Est\u00e1s saliendo de nuestro sitio","body":"\u003Cp\u003EEst\u00e1s abandonando el sitio de baccredomatic.com hacia un sitio externo \u00bfEst\u00e1s de acuerdo en querer realizar esta acci\u00f3n?\u003C\/p\u003E\n","labelyes":"De acuerdo","labelno":"Cancelar","domains":"*","target":"_self"}]},"google_analytics":{"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"lazy":{"lazysizes":{"lazyClass":"lazy","loadedClass":"lazyloaded","loadingClass":"lazyloading","preloadClass":"lazypreload","errorClass":"lazyerror","autosizesClass":"auto","srcAttr":"src","srcsetAttr":"srcset","sizesAttr":"auto","minSize":40,"customMedia":null,"init":false,"expFactor":1.5,"hFac":0.40000000000000002,"loadMode":1,"loadHidden":false,"ricTimeout":0,"throttleDelay":100,"plugins":[]},"placeholderSrc":"","preferNative":true,"minified":true,"libraryPath":"\/libraries\/lazysizes"},"whitelist":"","language":"es","show_signature":null,"chatbot_scripts":{"desktop":"\/","mobile":"\/"},"currentLanguage":"es","segment":"personas","showLoginBlock":false,"user":{"uid":0,"permissionsHash":"ec1ea0e04796ff63b1f82a0c8a1568e8497665c8aa28876f2c6299350aa84f3a"}}</script>
+<script src="/sites/default/files/js/js_1twSEe3uezTxQGLLy4FUsnzkk4Mvr_BhfuanxrClSO4.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_ftoYXNhrCXNslcrf9addlEEyRo8v008JR5oMFH0OhSs.js"></script>
+<script src="/modules/custom/bac_forms/chat/js/startChat/start-chat.js"></script>
+<script src="/sites/default/files/js/js_7gFWP4GmoD2zaxwPe-kzX4n2db4MP-uY9o6W79NdWMg.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/shepherd.js@5.0.1/dist/js/shepherd.js"></script>
+    
+    
+  </body>
+</html>
